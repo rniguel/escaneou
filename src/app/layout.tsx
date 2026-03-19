@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         "QR Code para link",
         "QR Code para texto",
     ],
-    authors: [{ name: "Miguel Riquelme", url: "https://github.com/miguelito" }],
+    authors: [{ name: "Miguel Riquelme", url: "https://github.com/rniguel" }],
     creator: "Miguel Riquelme",
     publisher: "Escaneou!",
     robots: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "pt_BR",
-        url: "https://escaneou.com",
+        url: "https://miguelito.dev",
         siteName: "Escaneou!",
         title: "Escaneou! - Gerador de QR Code Online Grátis",
         description:
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
         images: [
             "https://images.unsplash.com/photo-1595079676714-d804bc1095b4?q=80&w=2070&auto=format&fit=crop",
         ],
-        creator: "@miguelito",
+        creator: "@rniguel",
     },
     viewport: {
         width: "device-width",

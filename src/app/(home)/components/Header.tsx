@@ -33,12 +33,18 @@ export const Header = () => {
                         </span>
                     </Link>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-4">
                         <Link
-                            href="#"
+                            href="/"
                             className="text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 font-outfit"
                         >
                             Início
+                        </Link>
+                        <Link
+                            href="/privacidade"
+                            className="text-sm text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300 font-outfit"
+                        >
+                            Privacidade
                         </Link>
                     </div>
                 </div>
