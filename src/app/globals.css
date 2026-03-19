@@ -2,20 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+    :root {
+        --background: #f8fafc;
+        --foreground: #0f172a;
+    }
+
+    .dark {
+        --background: #0a0a0a;
+        --foreground: #f1f5f9;
+    }
+
+    body {
+        @apply bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-blue-950 dark:to-purple-950 text-slate-900 dark:text-slate-100;
+        @apply transition-colors duration-500 ease-in-out;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer components {
+    .glass-card {
+        @apply bg-glass-light dark:bg-glass-dark backdrop-blur-xl backdrop-filter;
+        @apply border border-white/20 dark:border-white/10;
+        @apply shadow-glass;
+        @apply transition-all duration-300 ease-out;
+    }
+
+    .glass-card:hover {
+        @apply border-white/30 dark:border-white/20;
+        @apply shadow-glow;
+        @apply transform scale-[1.02];
+    }
+
+    .btn-primary {
+        @apply bg-gradient-primary text-white;
+        @apply px-6 py-3 rounded-2xl font-semibold;
+        @apply shadow-lg shadow-primary-500/30;
+        @apply hover:shadow-glow hover:shadow-primary-500/50;
+        @apply hover:scale-105 active:scale-95;
+        @apply transition-all duration-300 ease-out;
+        @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+    }
+
+    .btn-secondary {
+        @apply bg-gradient-secondary text-white;
+        @apply px-6 py-3 rounded-2xl font-semibold;
+        @apply shadow-lg shadow-secondary-500/30;
+        @apply hover:shadow-glow hover:shadow-secondary-500/50;
+        @apply hover:scale-105 active:scale-95;
+        @apply transition-all duration-300 ease-out;
+    }
+
+    .btn-success {
+        @apply bg-success-600 text-white;
+        @apply px-6 py-3 rounded-2xl font-semibold;
+        @apply shadow-lg shadow-success-500/30;
+        @apply hover:bg-success-500 hover:shadow-success-500/50;
+        @apply hover:scale-105 active:scale-95;
+        @apply transition-all duration-300 ease-out;
+    }
+
+    .btn-icon {
+        @apply w-12 h-12 flex items-center justify-center;
+        @apply rounded-2xl bg-white/10 dark:bg-white/5;
+        @apply hover:bg-white/20 dark:hover:bg-white/10;
+        @apply hover:scale-110 active:scale-95;
+        @apply transition-all duration-300 ease-out;
+        @apply border border-white/20 dark:border-white/10;
+    }
+
+    .input-modern {
+        @apply w-full px-6 py-4 rounded-2xl;
+        @apply bg-white/50 dark:bg-white/10;
+        @apply border border-slate-200 dark:border-white/10;
+        @apply focus:border-primary-500 dark:focus:border-primary-400;
+        @apply focus:ring-4 focus:ring-primary-500/20;
+        @apply outline-none transition-all duration-300;
+        @apply placeholder:text-slate-400 dark:placeholder:text-slate-500;
+    }
+
+    .input-modern:focus {
+        @apply bg-white dark:bg-white/5;
+        @apply shadow-glow;
+    }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+    .text-gradient {
+        @apply bg-gradient-primary bg-clip-text text-transparent;
+    }
+
+    .text-gradient-secondary {
+        @apply bg-gradient-secondary bg-clip-text text-transparent;
+    }
+
+    .bg-pattern {
+        background-image: radial-gradient(
+            circle at 1px 1px,
+            rgba(14, 165, 233, 0.15) 1px,
+            transparent 0
+        );
+        background-size: 40px 40px;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
