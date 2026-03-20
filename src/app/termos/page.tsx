@@ -275,8 +275,8 @@ export default function TermosPage() {
                                     <strong className="text-primary-600 dark:text-primary-400">
                                         Escaneou!
                                     </strong>{" "}
-                                    é fornecido "como está", sem garantias de
-                                    qualquer tipo.
+                                    é fornecido &quot;como está&quot;, sem
+                                    garantias de qualquer tipo.
                                 </p>
                                 <p>
                                     Não garantimos que o serviço estará
@@ -351,9 +351,10 @@ export default function TermosPage() {
                                 </p>
                                 <p>
                                     Qualquer alteração será efetuada postando os
-                                    novos termos nesta página. A data de "Última
-                                    atualização" no topo da página indicará
-                                    quando os termos foram revisados.
+                                    novos termos nesta página. A data de
+                                    &quot;Última atualização&quot; no topo da
+                                    página indicará quando os termos foram
+                                    revisados.
                                 </p>
                                 <p>
                                     O uso continuado do serviço após a
